@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List | Organize suas tarefas</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <script src="assets/js/manageTasks.js"></script>
+</head>
+
+<body>
+    <main>
+        <form autocomplete="off">
+            <label for="task">Digite uma tarefa...</label>
+            <input type="text" name="task" id="task" placeholder="...">
+
+            <input type="button" value="Registrar" onclick="registerTask()">
+            <input type="reset" value="Limpar">
+        </form>
+        <section class="list-tasks">
+            <h2>Lista de tarefas</h2>
+            <aside class="list-tasks-pending">
+                <h3>Tarefas pendentes</h3>
+                <p style="opacity: .75;">Nenhuma tarefa disponível pendente.</p>
+                <!-- <div class="task">
+                    <input type="checkbox" name="task1" id="task1">
+                    <h3 class="task-title" id="task1">Organizar a rotina</h3>
+                    <p class="task-description">Me organizar.</p>
+                </div> -->
+            </aside>
+            <aside class="list-tasks-concluded">
+                <h3>Tarefas concluídas </h3>
+                <!-- <div class="task checked">
+                    <input type="checkbox" name="task1" id="task1">
+                    <h3 class="task-title" id="task1">Organizar a rotina</h3>
+                    <p class="task-description">Me organizar.</p>
+                </div> -->
+            </aside>
+        </section>
+    </main>
+</body>
+
+</html>
