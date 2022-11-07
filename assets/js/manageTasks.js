@@ -1,7 +1,4 @@
-let pendingTasks = []
-
-function registerTask() {
-    let task = document.getElementById("task").value
-    pendingTasks.push(task)
-    console.log(pendingTasks)
+function addNewTask() {
+    let title
+    let task = new Task(title, description)
 }

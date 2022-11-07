@@ -6,35 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List | Organize suas tarefas</title>
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="assets/js/manageTasks.js"></script>
+
 </head>
 
 <body>
     <main>
         <form autocomplete="off">
             <label for="task">Digite uma tarefa...</label>
-            <input type="text" name="task" id="task" placeholder="...">
+            <input type="text" name="task" id="task" placeholder="..." required>
 
-            <input type="button" value="Registrar" onclick="registerTask()">
+            <input type="button" onclick="addNewTask()" value="Registrar">
             <input type="reset" value="Limpar">
         </form>
         <section class="list-tasks">
-            <h2>Lista de tarefas</h2>
+            <h1>Lista de tarefas</h1>
             <aside class="list-tasks-pending">
-                <h3>Tarefas pendentes</h3>
-                <p style="opacity: .75;">Nenhuma tarefa disponível pendente.</p>
+                <h2>Tarefas pendentes</h2>
+                <p id="alert-task-pending-empty" style="opacity: .65;">Nenhuma tarefa pendente</p>
                 <!-- <div class="task">
-                    <input type="checkbox" name="task1" id="task1">
-                    <h3 class="task-title" id="task1">Organizar a rotina</h3>
-                    <p class="task-description">Me organizar.</p>
+                    <div>
+                        <h3 class="task-title">Organizar a rotina</h3>
+                        <p class="task-description">Me organizar.</p>
+                    </div>
+                    <button><span class="material-symbols-outlined">delete</span></button>
                 </div> -->
             </aside>
             <aside class="list-tasks-concluded">
-                <h3>Tarefas concluídas </h3>
-                <!-- <div class="task checked">
-                    <input type="checkbox" name="task1" id="task1">
-                    <h3 class="task-title" id="task1">Organizar a rotina</h3>
+                <h2>Tarefas concluídas </h2>
+                <p id="alert-task-concluded-empty" style="opacity: .65;">Nenhuma tarefa concluída</p>
+                <!-- <div class="task concluded">
+                    <h3 class="task-title">Organizar a rotina</h3>
                     <p class="task-description">Me organizar.</p>
+                    <button><span class="material-symbols-outlined">delete</span></button>
                 </div> -->
             </aside>
         </section>
